@@ -4,6 +4,7 @@ from discord.ext import commands
 from discord.ext.commands import Bot
 import requests
 import json
+import os
 
 def get_prefix(bot, msg):
     """A callable Prefix for our bot. This could be edited to allow per server prefixes."""
