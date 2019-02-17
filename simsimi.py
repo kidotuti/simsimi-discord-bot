@@ -42,4 +42,4 @@ async def simsimi(*msg):
 
         await bot.say(embed=embed)
 
-bot.run(os.environ['BOT_TOKEN']) 
+client.run(os.environ['BOT_TOKEN']) 
