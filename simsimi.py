@@ -18,6 +18,7 @@ bot = commands.Bot(command_prefix=get_prefix,description='A music bot for discor
 async def on_ready():
     print(bot.user.name)
     print("Connecting...")
+    await bot.change_presence(game=discord.Game(name=",sim | ,sm | Bot được phát triển bởi Kido"), status=discord.Status('idle'))
     
 @bot.command(aliases=['sm'])
 async def sim(*msg):
@@ -30,7 +31,6 @@ async def sim(*msg):
             return await client.say(embed=embed)
     embed=discord.Embed(title=response['messages'][0]['text'], color=embed.colour)
     embed.set_author(name="Simsimi", url="https://www.facebook.com/Kidokhongbigay", icon_url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqSu3M-XrbptMiku7dAIKVQQMb8euR-5osgBLpxXkktdqGBcxu")
-    embed.set_footer(text="Bot được phát triển bởi Kido!")
     await bot.say(embed=embed);
 
 bot.run('NDQyMjA2NDcwMTYzOTIyOTU1.D0qdeQ._TpJNPkXbtGGluwoiwEttqbRoIo')
