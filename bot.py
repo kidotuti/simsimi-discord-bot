@@ -14,7 +14,7 @@ def get_prefix(bot, msg):
 
     me=['kido.']
 
-    if msg.author.id == '185181025104560128':
+    if msg.author.id == '321586138932445184':
         return commands.when_mentioned_or(*me)(bot, msg)
 
 
@@ -41,5 +41,6 @@ async def simsimi(*msg):
         embed.set_footer(text="Created by Kido. Have a great time!")
 
         await bot.say(embed=embed)
+        
 
-bot.run('NDQyMjA2NDcwMTYzOTIyOTU1.D0qdeQ._TpJNPkXbtGGluwoiwEttqbRoIo')
+bot.run(os.environ['BOT_TOKEN'])
