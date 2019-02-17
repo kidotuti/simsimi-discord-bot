@@ -19,7 +19,7 @@ async def on_ready():
     print(bot.user.name)
     print("Connecting...")
     
-@bot.command(aliases=['sim'])
+@bot.command(aliases=['sm'])
 async def sim(*msg):
     """Nói chuyện với Simsimi."""
     word = ' '.join(msg)
