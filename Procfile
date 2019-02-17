@@ -1,1 +1,1 @@
-worker: node bot.js
+worker: python simsimi.py
