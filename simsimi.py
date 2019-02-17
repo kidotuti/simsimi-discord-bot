@@ -63,11 +63,11 @@ async def urban(*msg):
 async def hug(ctx, *, member: discord.Member = None):
     """Ôm ai đó!"""
     if member is None:
-            await client.say(ctx.message.author.mention + " đã được ôm!")
+            await bot.say(ctx.message.author.mention + " đã được ôm!")
     else:
             if member.id == ctx.message.author.id:
-                await client.say(ctx.message.author.mention + " đã tự ôm chính mình!")
+                await bot.say(ctx.message.author.mention + " đã tự ôm chính mình!")
             else:
-                await client.say(member.mention + " đã được ôm bởi " + ctx.message.author.mention + "!")
+                await bot.say(member.mention + " đã được ôm bởi " + ctx.message.author.mention + "!")
 
 bot.run(os.environ['BOT_TOKEN'])
