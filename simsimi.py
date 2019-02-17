@@ -38,8 +38,6 @@ async def simsimi(*msg):
         embed = discord.Embed(description="Không kết quả nào được tìm thấy!", colour=0xFF0000)
         embed = discord.Embed(title="Simsimi BOT", colour=embed.colour)
         embed.set_footer(text="Created by Kido. Have a great time!")
-
         await bot.say(embed=embed)
-        
-
-@bot.run(os.environ['BOT_TOKEN'])
+   
+bot.run(os.environ['BOT_TOKEN'])
