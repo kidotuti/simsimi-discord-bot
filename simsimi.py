@@ -19,6 +19,8 @@ async def on_ready():
     print(bot.user.name)
     print("Connecting...")
     await bot.change_presence(game=discord.Game(name=",sim | ,simsimi | Bot được phát triển bởi Kido, dựa trên ý tưởng của Thịnh. Have fun!"), status=discord.Status('idle'))
+    
+bot.remove_command('help')
 
 @bot.command()
 async def help(ctx):
