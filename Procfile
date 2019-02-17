@@ -1,1 +1,1 @@
-worker: python simsimi.py
+worker: python bot.py
