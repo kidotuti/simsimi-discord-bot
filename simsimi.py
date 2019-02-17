@@ -38,14 +38,14 @@ async def simsimi(*msg):
         response = requests.get(api, params=[("term", word)]).json()
         embed = discord.Embed(description="Không kết quả nào được tìm thấy!", colour=0xFF0000)
         if len(response["list"]) == 0:
-            return await client.say(embed=embed)
+            return await bot.say(embed=embed)
         # Add results to the embed
         embed = discord.Embed(title="Simsimi BOT", colour=embed.colour)
         embed.set_footer(text="Created by Kido. Have a great time!")
 
-        await client.say(embed=embed)
+        await bot.say(embed=embed)
 
     except:
-        await client.say(config.err_mesg)
+        await bot.say(config.err_mesg)
 
 bot.run(os.environ['BOT_TOKEN']) 
