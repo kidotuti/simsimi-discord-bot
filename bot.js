@@ -12,7 +12,7 @@ client.on('message', async message => {
 	const query = querystring.stringify({ term: args.join(' ') });
 	if (message.content === '${query}') {
 		const { body } = await fetch('http://api.vietbot.net/simsimi.php?key=sibendz&text=${query}').then(response => response.json());
-
+	}
 		message.channel.send(body.file);
 });
 
