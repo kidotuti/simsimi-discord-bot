@@ -26,7 +26,7 @@ async def simsimi(*msg):
     api = "http://api.vietbot.net/simsimi.php?key=sibendz&text="
     response = requests.get(api, params=[("term", word)]).json()
     embed = discord.Embed(description="Không kết quả nào được tìm thấy!", colour=0xFF0000)
-    embed = discord.Embed(title="Simsimi BOT", colour=embed.colour)
+    embed = discord.Embed(title="Simsimi BOT", description=word, colour=embed.colour)
     embed.set_footer(text="Created by Kido. Have a great time!")
     await bot.say(embed=embed);
 
