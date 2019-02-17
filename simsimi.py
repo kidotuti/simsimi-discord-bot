@@ -23,8 +23,8 @@ async def on_ready():
 async def simsimi(*msg):
     """Nói chuyện với Simsimi."""
     word = ' '.join(msg)
-    api = "http://api.vietbot.net/simsimi.php"
-    response = requests.get(api, params=[("sibendz","text", word)]).json()
+    api = "http://api.vietbot.net/simsimi.php?key=sibendz"
+    response = requests.get(api, params=[("text", word)]).json()
     embed = discord.Embed(description="Không kết quả nào được tìm thấy!", colour=0xFF0000)
     if len(response["messages"]) == 0:
             return await client.say(embed=embed)
