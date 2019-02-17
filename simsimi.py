@@ -19,6 +19,10 @@ async def on_ready():
     print(bot.user.name)
     print("Connecting...")
     await bot.change_presence(game=discord.Game(name=",sim | ,simsimi | Bot được phát triển bởi Kido"), status=discord.Status('idle'))
+
+@bot.command()
+async def sim(ctx):
+    await ctx.send("Gọi gì bố?")
     
 @bot.command(aliases=['sim'])
 async def simsimi(*msg):
