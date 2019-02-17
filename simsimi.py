@@ -32,4 +32,4 @@ async def simsimi(*msg):
         await bot.say(embed=embed);
 
 # Read client token from hihi
-bot.run('NDQyMjA2NDcwMTYzOTIyOTU1.D0qdeQ._TpJNPkXbtGGluwoiwEttqbRoIo')
+        bot.run('NDQyMjA2NDcwMTYzOTIyOTU1.D0qdeQ._TpJNPkXbtGGluwoiwEttqbRoIo')
