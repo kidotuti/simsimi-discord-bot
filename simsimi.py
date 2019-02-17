@@ -18,10 +18,10 @@ bot = commands.Bot(command_prefix=get_prefix,description='A music bot for discor
 async def on_ready():
     print(bot.user.name)
     print("Connecting...")
-    await bot.change_presence(game=discord.Game(name=",sim | ,sm | Bot được phát triển bởi Kido"), status=discord.Status('idle'))
+    await bot.change_presence(game=discord.Game(name=",sim | ,simsimi | Bot được phát triển bởi Kido"), type=3, status=discord.Status('idle'))
     
-@bot.command(aliases=['sm'])
-async def sim(*msg):
+@bot.command(aliases=['sim'])
+async def simsimi(*msg):
     """Nói chuyện với Simsimi."""
     word = ' '.join(msg)
     api = "http://api.vietbot.net/simsimi.php?key=sibendz"
