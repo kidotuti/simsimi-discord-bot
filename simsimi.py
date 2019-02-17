@@ -24,7 +24,8 @@ bot.remove_command('help')
 
 @bot.command(pass_context=True)
 async def help(ctx):
-    embed = discord.Embed(title="Simsimi", description="Có mỗi nhiêu đây lệnh thôi. Kido hứa sẽ update sau", color=0xeee657)
+    embed=discord.Embed(color=0x9954f5)
+    embed.set_author(name="Simsimi", url="https://www.facebook.com/Kidokhongbigay", icon_url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqSu3M-XrbptMiku7dAIKVQQMb8euR-5osgBLpxXkktdqGBcxu")
     embed.add_field(name="Urban", value="Gõ ,urban <từ cần tra nghĩa> để tra nghĩa tiếng Anh trên từ điển Urban")
     embed.add_field(name="Hug", value="Gõ ,hug <mention user> để 'ôm' ai đó theo cách riêng của bạn!")
     embed.add_field(name="Sim | Simsimi", value="Gõ ,sim <nội dung> để nói chuyện với Simsimi")
@@ -54,6 +55,7 @@ async def urban(*msg):
     if len(response["list"]) == 0:
         return await bot.say(embed=embed)
     embed = discord.Embed(title="Từ cần tra nghĩa", description=word, colour=embed.colour)
+    embed.set_author(name="Simsimi", url="https://www.facebook.com/Kidokhongbigay", icon_url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqSu3M-XrbptMiku7dAIKVQQMb8euR-5osgBLpxXkktdqGBcxu")
     embed.add_field(name="Định nghĩa hàng đầu:", value=response['list'][0]['definition'])
     embed.add_field(name="Ví dụ:", value=response['list'][0]["example"])
     embed.set_footer(text="Bot được phát triển bởi Kido)
