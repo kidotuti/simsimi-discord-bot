@@ -30,7 +30,7 @@ async def simsimi(*msg):
     if len(response["messages"]) == 0:
             return await client.say(embed=embed)
     embed=discord.Embed(title=response['messages'][0]['text'], color=embed.colour)
-    embed.set_author(name="Simsimi", url="https://www.facebook.com/Kidokhongbigay", icon_url="https://i.pinimg.com/236x/82/fa/8a/82fa8a8d0abac9e28614df1f5c45efeb.jpg?b=t")
+    embed.set_author(name="Simsimi", url="https://www.facebook.com/Kidokhongbigay", icon_url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqSu3M-XrbptMiku7dAIKVQQMb8euR-5osgBLpxXkktdqGBcxu")
     await bot.say(embed=embed);
    
 
