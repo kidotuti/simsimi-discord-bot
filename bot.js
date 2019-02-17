@@ -10,7 +10,7 @@ client.once('ready', () => {
 
 client.on('message', message => {
 	if (message.content === querystring) {
-		const body = fetch.get('http://api.vietbot.net/simsimi.php?key=sibendz&text=${query}').then(response => response.json());
+		const body = fetch.get('http://api.vietbot.net/simsimi.php?key=sibendz&text=${querystring}').then(response => response.json());
 		message.reply(body);
 	}
 });
