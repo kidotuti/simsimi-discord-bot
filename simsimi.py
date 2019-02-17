@@ -22,7 +22,7 @@ async def on_ready():
     
 bot.remove_command('help')
 
-@bot.command()
+@bot.command(pass_context=True)
 async def help(ctx):
     embed = discord.Embed(title="Simsimi", description="Có mỗi nhiêu đây lệnh thôi. Kido hứa sẽ update sau", color=0xeee657)
     embed.add_field(name="Urban", value="Gõ ,urban <từ cần tra nghĩa> để tra nghĩa tiếng Anh trên từ điển Urban")
