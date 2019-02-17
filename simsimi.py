@@ -22,14 +22,12 @@ async def on_ready():
 @bot.command(aliases=['sim'])
 async def simsimi(*msg):
     """Nói chuyện với Simsimi."""
-    try:
-        word = ' '.join(msg)
-        api = "http://api.vietbot.net/simsimi.php?key=sibendz&text="
-        response = requests.get(api, params=[("term", word)]).json()
-        embed = discord.Embed(description="Không kết quả nào được tìm thấy!", colour=0xFF0000)
-        embed = discord.Embed(title="Simsimi BOT", colour=embed.colour)
-        embed.set_footer(text="Created by Kido. Have a great time!")
-        await bot.say(embed=embed);
+    word = ' '.join(msg)
+    api = "http://api.vietbot.net/simsimi.php?key=sibendz&text="
+    response = requests.get(api, params=[("term", word)]).json()
+    embed = discord.Embed(description="Không kết quả nào được tìm thấy!", colour=0xFF0000)
+    embed = discord.Embed(title="Simsimi BOT", colour=embed.colour)
+    embed.set_footer(text="Created by Kido. Have a great time!")
+    await bot.say(embed=embed);
 
-# Read client token from hihi
-        bot.run('NDQyMjA2NDcwMTYzOTIyOTU1.D0qdeQ._TpJNPkXbtGGluwoiwEttqbRoIo')
+bot.run('NDQyMjA2NDcwMTYzOTIyOTU1.D0qdeQ._TpJNPkXbtGGluwoiwEttqbRoIo')
