@@ -26,7 +26,6 @@ bot = commands.Bot(command_prefix=get_prefix,description='A music bot for discor
 
 @bot.event
 async def on_ready():
-    bot.loop.create_task(bg())
     print(bot.user.name)
     print("Connecting...")
     
