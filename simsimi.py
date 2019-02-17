@@ -29,7 +29,7 @@ async def simsimi(*msg):
     if len(response["messages"]) == 0:
             return await client.say(embed=embed)
     embed=discord.Embed(title="Trả lời", description=response['messages'][0]['text'], color=embed.colour)
-    embed.set_author(name="Simsimi", url="https://www.facebook.com/Kidokhongbigay",, icon_url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqSu3M-XrbptMiku7dAIKVQQMb8euR-5osgBLpxXkktdqGBcxu")
+    embed.set_author(name="Simsimi", url="https://www.facebook.com/Kidokhongbigay", icon_url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqSu3M-XrbptMiku7dAIKVQQMb8euR-5osgBLpxXkktdqGBcxu")
     embed.set_thumbnail(url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhhAGI4daSF2ejjSXoa_PiuzNSOosX_UxjgdLFLSJWX1MdnVgQ")
     embed.set_footer(text="Bot được phát triển bởi Kido!")
     await bot.say(embed=embed);
