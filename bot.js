@@ -22,7 +22,7 @@ client.on('message', async message => {
 
 		const query = querystring.stringify({ term: args.join(' ') });
 
-		const { body } = await fetch.get(`http://api.vietbot.net/simsimi.php?key=sibendz&text=${query}`).then(response => response.json());
+		const { body } = await fetch(`http://api.vietbot.net/simsimi.php?key=sibendz&text=${query}`).then(response => response.json());
 
 		const embed = new Discord.RichEmbed()
 			.setColor('#00ffff')
