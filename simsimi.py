@@ -31,8 +31,6 @@ async def simsimi(*msg):
             return await client.say(embed=embed)
     embed=discord.Embed(title=response['messages'][0]['text'], color=embed.colour)
     embed.set_author(name="Simsimi", url="https://www.facebook.com/Kidokhongbigay", icon_url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqSu3M-XrbptMiku7dAIKVQQMb8euR-5osgBLpxXkktdqGBcxu")
-    Channel = message.channel
-    await self.bot.send_typing(Channel)
     await bot.say(embed=embed);
    
 
