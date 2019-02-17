@@ -24,7 +24,7 @@ client.on('message', message => {
 
 		const { body } = fetch(`http://api.vietbot.net/simsimi.php?key=sibendz&text=${query}`).then(response => response.json());
 
-		message.channel.send(body.file);
+		message.channel.send(body);
 	}
 });
 
