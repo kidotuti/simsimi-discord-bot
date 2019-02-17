@@ -29,7 +29,7 @@ async def simsimi(*msg):
     if len(response["messages"]) == 0:
             return await client.say(embed=embed)
     embed = discord.Embed(title="Simsimi BOT", description=word, colour=embed.colour)
-    embed.add_field(name="Trả lời:", value=response['messages'][0]['list'])
+    embed.add_field(name="Trả lời:", value=response['messages'][0]['text'])
     embed.set_footer(text="Created by Kido. Have a great time!")
     await bot.say(embed=embed);
 
