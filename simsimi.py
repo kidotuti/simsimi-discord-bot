@@ -54,7 +54,7 @@ async def urban(*msg):
     embed = discord.Embed(description="Không kết quả nào được tìm thấy!", colour=0xFF0000)
     if len(response["list"]) == 0:
         return await bot.say(embed=embed)
-    embed = discord.Embed(title="Từ cần tra nghĩa", description=word, colour=embed.colour)
+    embed = discord.Embed(title="Từ cần tra nghĩa:", description=word, colour=embed.colour)
     embed.set_author(name="Simsimi", url="https://www.facebook.com/Kidokhongbigay", icon_url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqSu3M-XrbptMiku7dAIKVQQMb8euR-5osgBLpxXkktdqGBcxu")
     embed.add_field(name="Định nghĩa hàng đầu:", value=response['list'][0]['definition'])
     embed.add_field(name="Ví dụ:", value=response['list'][0]["example"])
