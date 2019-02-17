@@ -2,11 +2,7 @@ import asyncio
 import discord
 from discord.ext import commands
 from discord.ext.commands import Bot
-import platform
-import sys
-import os
 import requests
-import urllib.request
 import json
 
 def get_prefix(bot, msg):
@@ -27,13 +23,13 @@ def get_prefix(bot, msg):
 bot = commands.Bot(command_prefix=get_prefix,description='A music bot for discord, developed by Kido')
 
 
-@client.event
+@bot.event
 async def on_ready():
     bot.loop.create_task(bg())
     print(bot.user.name)
     print("Connecting...")
     
-@client.command(aliases=['sim'])
+@bot.command(aliases=['sim'])
 async def simsimi(*msg):
     """Nói chuyện với Simsimi."""
     try:
