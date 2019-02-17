@@ -12,7 +12,7 @@ def get_prefix(bot, msg):
         return commands.when_mentioned_or(*me)(bot, msg)
     return commands.when_mentioned_or(*prefixes)(bot, msg)
 
-bot = commands.Bot(command_prefix=get_prefix,description='A music bot for discord, developed by Kido')
+bot = commands.Bot(command_prefix=get_prefix, description='A music bot for discord, developed by Kido')
 
 @bot.event
 async def on_ready():
@@ -56,7 +56,7 @@ async def urban(*msg):
     embed = discord.Embed(title="Từ cần tra nghĩa", description=word, colour=embed.colour)
     embed.add_field(name="Định nghĩa hàng đầu:", value=response['list'][0]['definition'])
     embed.add_field(name="Ví dụ:", value=response['list'][0]["example"])
-    embed.set_footer(text="Thẻ: " + ', '.join(response['tags']))
+    embed.set_footer(text="Bot được phát triển bởi Kido)
     await bot.say(embed=embed)
    
 @bot.command(pass_context=True)
