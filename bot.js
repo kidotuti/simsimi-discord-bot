@@ -24,13 +24,10 @@ client.on('message', message => {
 
 		const { body } = fetch(`http://api.vietbot.net/simsimi.php?key=sibendz&text=${query}`).then(response => response.json());
 
-		if (!body.list.length) {
-			return message.channel.send(`Deoco từ này **${args.join(' ')}**, dạy bố đi!`);
-		}
 
 		const [answer] = body.list;
 
-		message.channel.send(body.list[0].definition);
+		message.channel.send(body.list);
 	}
 });
 
