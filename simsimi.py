@@ -18,12 +18,16 @@ bot = commands.Bot(command_prefix=get_prefix,description='A music bot for discor
 async def on_ready():
     print(bot.user.name)
     print("Connecting...")
-    await bot.change_presence(game=discord.Game(name=",sim | ,simsimi | Bot được phát triển bởi Kido"), status=discord.Status('idle'))
+    await bot.change_presence(game=discord.Game(name=",sim | ,simsimi | Bot được phát triển bởi Kido, dựa trên ý tưởng của Thịnh. Have fun!"), status=discord.Status('idle'))
 
 @bot.command()
 async def help(ctx):
-    embed = discord.Embed(title="Simsimi", description="Đéo có lệnh nào cả. Kido hứa sẽ update sau", color=0xeee657)
-    await bot.say(embed=embed);
+    embed = discord.Embed(title="Simsimi", description="Có mỗi nhiêu đây lệnh thôi. Kido hứa sẽ update sau", color=0xeee657)
+    embed.add_field(name="Urban", value="Gõ ,urban <từ cần tra nghĩa> để tra nghĩa tiếng Anh trên từ điển Urban")
+    embed.add_field(name="Hug", value="Gõ ,hug <mention user> để 'ôm' ai đó theo cách riêng của bạn!")
+    embed.add_field(name="Sim | Simsimi", value="Gõ ,sim <nội dung> để nói chuyện với Simsimi")
+    embed.set_footer(text="Bot được phát triển bởi Kido")
+    await bot.say(embed=embed)
     
 @bot.command(aliases=['sim'])
 async def simsimi(*msg):
@@ -36,7 +40,7 @@ async def simsimi(*msg):
             return await bot.say(embed=embed)
     embed=discord.Embed(title=response['messages'][0]['text'], color=embed.colour)
     embed.set_author(name="Simsimi", url="https://www.facebook.com/Kidokhongbigay", icon_url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqSu3M-XrbptMiku7dAIKVQQMb8euR-5osgBLpxXkktdqGBcxu")
-    await bot.say(embed=embed);
+    await bot.say(embed=embed)
     
 @bot.command(aliases=['ud'])
 async def urban(*msg):
