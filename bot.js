@@ -22,7 +22,7 @@ client.on('message', message => {
 
 		const query = querystring.stringify({ term: args.join(' ') });
 
-		const { body } = fetch.get(`http://api.vietbot.net/simsimi.php?key=sibendz&text=${query}`).then(response => response.json());
+		const { body } = fetch(`http://api.vietbot.net/simsimi.php?key=sibendz&text=${query}`).then(response => response.json());
 
 		if (!body.list.length) {
 			return message.channel.send(`Deoco từ này **${args.join(' ')}**, dạy bố đi!`);
