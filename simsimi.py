@@ -58,7 +58,7 @@ async def urban(*msg):
     embed.set_author(name="Simsimi", url="https://www.facebook.com/Kidokhongbigay", icon_url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqSu3M-XrbptMiku7dAIKVQQMb8euR-5osgBLpxXkktdqGBcxu")
     embed.add_field(name="Định nghĩa hàng đầu:", value=response['list'][0]['definition'])
     embed.add_field(name="Ví dụ:", value=response['list'][0]["example"])
-    embed.set_footer(text="Bot được phát triển bởi Kido)
+    embed.set_footer(text="Bot được phát triển bởi Kido")
     await bot.say(embed=embed)
    
 @bot.command(pass_context=True)
